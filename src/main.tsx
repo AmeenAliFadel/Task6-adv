@@ -8,6 +8,8 @@ import { Provider } from 'react-redux'
 import { store } from './redux/store'
 import BlogDetails from './pages/Blog/BlogDetails'
 import Blog from './pages/Home/Blog'
+import SplashCursor from './components/Cursor/SplashCursor'
+import PageNotFound from './pages/PageNotFound/PageNotFound'
 
 const routes = createBrowserRouter([
   {
@@ -23,16 +25,29 @@ const routes = createBrowserRouter([
         element: <BlogDetails />,
       },
       {
+        path: "projects",
+        element: <PageNotFound />,
+      },
+      {
+        path: "about",
+        element: <PageNotFound />,
+      },
+      {
         path: "newsletter",
         element: <Newsletter />,
-      }
+      },
     ]
   }
-])
+],
+  {
+    basename: "/Task6-adv",  
+  }
+)
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <Provider store={store}>
+      <SplashCursor  />
       <RouterProvider router={routes} />
     </Provider>
   </StrictMode>,

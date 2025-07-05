@@ -1,4 +1,5 @@
 "use client";
+import React from "react";
 import { useEffect, useRef } from "react";
 
 interface ColorRGB {
@@ -51,8 +52,7 @@ function pointerPrototype(): Pointer {
     color: { r: 0, g: 0, b: 0 },
   };
 }
-
-export default function SplashCursor({
+  function SplashCursor({
   SIM_RESOLUTION = 128,
   DYE_RESOLUTION = 1440,
   CAPTURE_RESOLUTION = 512,
@@ -1515,3 +1515,4 @@ export default function SplashCursor({
     </div>
   );
 }
+export default React.memo(SplashCursor);

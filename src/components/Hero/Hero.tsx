@@ -3,7 +3,7 @@ import BlurText from "../BlurText/BlurText";
 export default function Hero({ text }: { text: string }) {
     return (
         <>
-            <div className=" py-6 mt-[100px] flex justify-center items-center text-center mx-auto border-t border-b border-[#00000057] dark:border-white ">
+            <div className=" py-6 md:mt-[100px] mt-[72px]  flex justify-center items-center text-center mx-auto border-t border-b border-[#00000057] dark:border-white ">
                 <BlurText
                     text={text}
                     delay={250}
@@ -12,10 +12,7 @@ export default function Hero({ text }: { text: string }) {
                     className="text-color1 dark:text-white mx-auto font-bold text-6xl md:text-[161px] xl:text-[228px] !flex-nowrap"
                 />
             </div>
-
         </>
-
-
     )
 }
 

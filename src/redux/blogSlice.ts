@@ -13,7 +13,7 @@ interface BlogState {
 }
 
 const initialState: BlogState = {
-    posts: staticPosts, // عبيها مباشرة
+    posts: staticPosts,
     recentPosts: staticPosts.slice(0, 4),
     remainingPosts: staticPosts.slice(4),
     lastThreePosts: staticPosts.slice(-3),
@@ -46,14 +46,9 @@ export const blogSlice = createSlice({
                 state.relatedPosts = [];
             }
         },
-        // لو حابب تترك طريقة تحديث البوستات لو صار تغيير يدوي
-        updatePosts: (state) => {
-            state.recentPosts = state.posts.slice(0, 4);
-            state.remainingPosts = state.posts.slice(4);
-            state.lastThreePosts = state.posts.slice(-3);
-        }
+        
     }
 });
 
-export const { setCurrentPage, setCurrentPost, updatePosts } = blogSlice.actions;
+export const { setCurrentPage, setCurrentPost } = blogSlice.actions;
 export default blogSlice.reducer;

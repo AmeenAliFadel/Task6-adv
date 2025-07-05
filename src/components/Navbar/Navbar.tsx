@@ -75,7 +75,7 @@ export default function Navbar() {
     }, [isMenuOpen]);
 
     return (
-        <nav className="fixed top-0 left-0 w-full z-50 bg-white dark:bg-color2 text-black dark:text-white  h-[100px]">
+        <nav className="fixed top-0 left-0 w-full z-50 bg-white dark:bg-color2 text-black dark:text-white h-[72px]  md:h-[100px]">
             <div className="flex justify-between items-center w-[95.20%] lg:w-[84.44%] mx-auto pt-6 md:pt-7 lg:pt-[30px] pb-5 md:pb-[30px] lg:pb-[50px] text-color1  dark:text-white">
 
                 <h2 className="font-semibold text-lg lg:text-xl">Your Name</h2>

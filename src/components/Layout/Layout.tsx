@@ -1,7 +1,9 @@
-import { createContext, useState, useEffect } from 'react';
+import { createContext, useState, useEffect, useMemo } from 'react';
 import Navbar from '../Navbar/Navbar';
 import { Outlet } from 'react-router-dom';
-import SplashCursor from '../Cursor/SplashCursor';
+import { CircleLoader } from 'react-spinners';
+import ScrollToTop from '../ScrollToTop/ScrollToTop';
+import Footer from '../Footer/Footer';
 
 export const ThemeContext = createContext({
     isDark: false,
@@ -10,6 +12,7 @@ export const ThemeContext = createContext({
 
 export default function Layout() {
     const [isDark, setIsDark] = useState(false);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         if (isDark) {
@@ -19,21 +22,39 @@ export default function Layout() {
         }
     }, [isDark]);
 
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setLoading(false);
+        }, 2000);
+
+        return () => clearTimeout(timer);
+    }, []);
+
     const toggleDark = () => setIsDark(prev => !prev);
+
+    const themeContextValue = useMemo(() => ({ isDark, toggleDark }), [isDark]);
 
     return (
         <>
-            <SplashCursor />
-            <ThemeContext.Provider value={{ isDark, toggleDark }}>
-                <div className='bg-white dark:bg-color2'>
-                    <div className=" lg:w-[84.44%] w-[100%] mx-auto">
-                        <Navbar />
-                        <Outlet />
-                    </div>
+            {loading ? (
+                <div className="flex justify-center items-center h-screen bg-white dark:bg-color2">
+                    <CircleLoader color="#090D1F" size={80} />
                 </div>
-
-            </ThemeContext.Provider>
+            ) : (
+                <>
+                    
+                    <ThemeContext.Provider value={themeContextValue}>
+                        <div className='bg-white dark:bg-color2'>
+                            <div className="px-8 md:px-20">
+                                <Navbar />
+                                <Outlet />
+                                <Footer />
+                            </div>
+                        </div>
+                    </ThemeContext.Provider>
+                    <ScrollToTop />
+                </>
+            )}
         </>
-
     );
 }
