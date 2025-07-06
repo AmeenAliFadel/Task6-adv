@@ -63,14 +63,14 @@ const HomePage = () => {
                         <div className="bg-white dark:bg-color2 rounded-lg  hover:shadow-xl transform hover:!-translate-y-1 !transition duration-400 ease-in-out cursor-pointer">
                             <img src={recentPosts[0].mainImage} alt={recentPosts[0].title} className="w-full object-cover rounded-t-lg" />
                             <div className="p-4">
-                                <p className="text-sm text-color3">{recentPosts[0].author} • {recentPosts[0].date}</p>
-                                <h3 className="text-lg font-semibold mb-2 flex justify-between items-end text-color1 dark:text-white">
+                                <p className="text-sm 2xl:text-xl text-color3">{recentPosts[0].author} • {recentPosts[0].date}</p>
+                                <h3 className="text-lg 2xl:text-3xl font-semibold mb-2 flex justify-between items-end text-color1 dark:text-white">
                                     {recentPosts[0].title}
                                     <Link to={`/blogdetails/${recentPosts[0].id}`} className="text-blue-500 text-sm mt-2 inline-block">
                                         <img src={isDark ? arrowDark : arrow} alt="" />
                                     </Link>
                                 </h3>
-                                <p className="font-normal text-base text-color4 dark:text-color5 mb-6">{recentPosts[0].desc}</p>
+                                <p className="font-normal text-base 2xl:text-2xl text-color4 dark:text-color5 mb-6">{recentPosts[0].desc}</p>
                                 <div className="flex flex-wrap gap-2">
                                     {recentPosts[0].categories.map((category, index) => (
                                         <span
@@ -96,19 +96,19 @@ const HomePage = () => {
                                 <img
                                     src={post.mainImage}
                                     alt={post.title}
-                                    className="w-full md:w-[50%] object-cover h-[200px] rounded-t-lg md:rounded-tr-none md:rounded-l-lg"
+                                    className="w-full md:w-[50%] object-cover min-h-[200px] rounded-t-lg md:rounded-tr-none md:rounded-l-lg"
                                 />
                                 <div className="p-4">
-                                    <p className="text-sm text-color3 font-semibold">
+                                    <p className="text-sm 2xl:text-xl text-color3 font-semibold">
                                         {post.author} • {post.date}
                                     </p>
-                                    <h3 className="text-lg font-semibold mb-2 flex justify-between items-end text-color1 dark:text-white">
+                                    <h3 className="text-lg 2xl:text-3xl font-semibold mb-2 flex justify-between items-end text-color1 dark:text-white">
                                         {post.title}
                                         <Link to={`/blogdetails/${post.id}`} className="text-blue-500 text-sm mt-2 inline-block">
                                             <img src={isDark ? arrowDark : arrow} alt="" />
                                         </Link>
                                     </h3>
-                                    <p className="font-normal text-base text-color4 dark:text-color5 mb-6">
+                                    <p className="font-normal text-base 2xl:text-2xl text-color4 dark:text-color5 mb-6">
                                         {post.desc}
                                     </p>
                                     <div className="flex flex-wrap gap-2">
@@ -129,16 +129,16 @@ const HomePage = () => {
 
                 {/* 3 */}
                 <div className="flex bg-white dark:bg-color2 rounded-lg  hover:shadow-xl transform hover:!-translate-y-1 !transition duration-400 ease-in-out cursor-pointer flex-col lg:flex-row mt-[60px]">
-                    <img src={recentPosts[3].mainImage} alt={recentPosts[3].title} className="w-full lg:w-[50%] object-cover rounded-t-lg lg:rounded-tr-none lg:rounded-l-lg" />
+                    <img src={recentPosts[3].mainImage} alt={recentPosts[3].title} className="w-full lg:w-[50%]  object-cover rounded-t-lg lg:rounded-tr-none lg:rounded-l-lg" />
                     <div className="p-4 w-full lg:w-[50%]">
-                        <p className="text-sm text-color3 font-semibold">{recentPosts[3].author} • {recentPosts[3].date}</p>
-                        <h3 className="text-lg font-semibold mb-2 flex justify-between items-end text-color1 dark:text-white">
+                        <p className="text-sm 2xl:text-xl text-color3 font-semibold">{recentPosts[3].author} • {recentPosts[3].date}</p>
+                        <h3 className="text-lg 2xl:text-3xl font-semibold mb-2 flex justify-between items-end text-color1 dark:text-white">
                             {recentPosts[3].title}
                             <Link to={`/blogdetails/${recentPosts[3].id}`} className="text-blue-500 text-sm mt-2 inline-block">
                                 <img src={isDark ? arrowDark : arrow} alt="" />
                             </Link>
                         </h3>
-                        <p className="font-normal text-base text-color4 dark:text-color5 mb-6">{recentPosts[3].desc}</p>
+                        <p className="font-normal text-base 2xl:text-2xl text-color4 dark:text-color5 mb-6">{recentPosts[3].desc}</p>
                         <div className="flex flex-wrap gap-2">
                             {recentPosts[3].categories.map((category, index) => (
                                 <span

@@ -2,7 +2,7 @@ import { CiAlarmOn } from "react-icons/ci";
 
 export default function PageNotFound() {
     return (
-        <div className="flex flex-col justify-center items-center min-h-screen bg-white dark:bg-color2">
+        <div className="flex flex-col justify-center items-center min-h-[100vh] bg-white dark:bg-color2">
             <div className="relative">
                 <div className="w-20 h-20 border-4 border-dashed border-color3 rounded-full animate-spin"></div>
                 <span className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-color3 font-semibold">

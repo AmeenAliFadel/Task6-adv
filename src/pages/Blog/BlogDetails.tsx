@@ -24,7 +24,7 @@ export default function BlogDetails() {
 
   return (
     <div className="w-[95.20%] mx-auto">
-      <div className="flex flex-col-reverse md:flex-row gap-8 mt-[80px] md:mt-[100px]">
+      <div className="flex flex-col-reverse md:flex-row gap-8 mt-[80px] md:mt-[100px] 2xl:mt-[99px]">
         <div className="w-[100%] md:w-[41%] lg:w-[23.75%]">
           <h2 className="text-lg font-semibold text-color1 dark:text-white mb-4">Recent blog posts</h2>
           <div className="space-y-4">
@@ -45,14 +45,14 @@ export default function BlogDetails() {
               <img src={section.image} alt={`Section ${index}`} className="w-full mb-2" />
               {Object.values(section).map((text, idx) =>
                 idx === 0 ? null : (
-                  <p key={idx} className="text-base mb-2 text-color4 dark:text-color5">{text}</p>
+                  <p key={idx} className="text-base 2xl:text-2xl mb-2 text-color4 dark:text-color5">{text}</p>
                 )
               )}
             </div>
           ))}
         </div>
       </div>
-      <div className="flex justify-center lg:justify-end items-center">
+      <div className="flex justify-center 2xl:justify-center lg:justify-end items-center">
         <Form />
       </div>
     </div>

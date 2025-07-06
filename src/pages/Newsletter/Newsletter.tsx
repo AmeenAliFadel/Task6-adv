@@ -12,7 +12,7 @@ export default function Newsletter() {
   }
   return (
     <>
-      <div className=' w-[100%] mt-[80px] md:mt-[100px]  '>
+      <div className=' w-[100%] mt-[80px] md:mt-[100px] 2xl:mt-[99px] '>
         <Form />
         <div >
           <h2 className="text-2xl font-semibold mb-4 text-color1 dark:text-white">Recent blog posts</h2>
