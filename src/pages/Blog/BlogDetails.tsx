@@ -24,7 +24,7 @@ export default function BlogDetails() {
 
   return (
     <div className="w-[95.20%] mx-auto">
-      <div className="flex flex-col-reverse md:flex-row gap-8 mt-[80px] md:mt-[100px] 2xl:mt-[99px]">
+      <div className="flex flex-col-reverse md:flex-row gap-8 mt-[72px] md:mt-[100px] 2xl:mt-[99px]">
         <div className="w-[100%] md:w-[41%] lg:w-[23.75%]">
           <h2 className="text-lg font-semibold text-color1 dark:text-white mb-4">Recent blog posts</h2>
           <div className="space-y-4">
