@@ -43,7 +43,7 @@ function PostCard({ post }: { post: Post }) {
 
     return (
         <div className="flex justify-between flex-col bg-white dark:bg-color2 rounded-lg hover:shadow-xl transform hover:!-translate-y-1 !transition duration-400 ease-in-out cursor-pointer">
-            <img src={post.mainImage} alt={post.title} className="w-full mb-8 min-h-[200px] object-cover rounded-t-lg" />
+            <img src={post.mainImage} alt={post.title} className="w-full  h-[200px] 2xl:min-h-[200px] 2xl:h-auto 2xl:max-h-[350px] object-cover rounded-t-lg" />
             <div className="p-4">
                 <p className="text-sm 2xl:text-xl text-color3">{post.author} • {post.date}</p>
                 <h3 className="text-lg 2xl:text-3xl font-semibold mb-2 flex justify-between items-end text-color1 dark:text-white">

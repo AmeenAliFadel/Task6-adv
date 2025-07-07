@@ -9,7 +9,7 @@ export default function PageNotFound() {
                     <CiAlarmOn  className=" text-3xl" />
                 </span>
             </div>
-            <p className="mt-4 text-lg text-color1 dark:text-white animate-pulse">
+            <p className="mt-4 text-lg text-color1 dark:text-white animate-pulse text-center">
                 This page is currently under development
             </p>
         </div>

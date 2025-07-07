@@ -96,7 +96,7 @@ const HomePage = () => {
                                 <img
                                     src={post.mainImage}
                                     alt={post.title}
-                                    className="w-full md:w-[50%] object-cover min-h-[200px] rounded-t-lg md:rounded-tr-none md:rounded-l-lg"
+                                    className="w-full md:w-[50%] object-cover h-[200px] 2xl:min-h-[200px] 2xl:h-auto 2xl:max-h-[350px] rounded-t-lg md:rounded-tr-none md:rounded-l-lg"
                                 />
                                 <div className="p-4">
                                     <p className="text-sm 2xl:text-xl text-color3 font-semibold">
